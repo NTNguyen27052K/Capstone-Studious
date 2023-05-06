@@ -97,7 +97,7 @@
           </div>
         </div>
         <!--! headerNav -->
-        <div class="headerNav">
+        <div class="headerNav fixed-top" id="site-header">
           <!-- container-fluid -->
           <div class="container-fluid">
             <!-- headerNav__content -->
@@ -128,7 +128,7 @@
                     >
                       <!-- nav-item HOME -->
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#"
+                        <a class="nav-link" href="./index.html" rel="nofollow"
                           >HOME
                         </a>
                       </li>
@@ -763,7 +763,26 @@
     ></script>
     <script src="./js/util.js"></script>
     <script src="./js/mainBackToTop.js"></script>
+    <!-- magnific popup -->
+    <script src="https://wp.w3layouts.com/studious/wp-content/themes/studious/assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- menu js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
 
+        if (scroll >= 80) {
+          $("#site-header").addClass("nav-fixed");
+        } else {
+          $("#site-header").removeClass("nav-fixed");
+        }
+      });
+    </script>
     <!-- OWL FUNCTION -->
     <script>
       $(document).ready(function () {
@@ -814,14 +833,7 @@
         // document.getElementsByClassName("myWhiteTex").classList.toggle("dark");
       };
     </script>
-    <!-- magnific popup -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-      integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- <script src="https://wp.w3layouts.com/studious/wp-content/themes/studious/assets/js/jquery.magnific-popup.min.js"></script> -->
+
     <script>
       $(document).ready(function () {
         $(".popup-with-zoom-anim").magnificPopup({
