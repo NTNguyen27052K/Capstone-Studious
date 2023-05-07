@@ -52,166 +52,182 @@
   </head>
 
   <body id="myBody">
-    <!-- ! ---------- header ---------- -->
-    <header>
-      <div class="header__sticky">
-        <!--! header__top -->
-        <div class="header__top">
-          <div class="container-fluid">
-            <div
-              class="header__top--content d-flex align-items-center justify-content-between"
-            >
-              <!--! header__top--left -->
-              <div class="header__top--left">
-                <a href="#">Have any question ?</a>
-                <a href="tel:+1(21) 234 4567">
-                  <i class="fa fa-phone"></i>
-                  +1(21) 234 4567
-                </a>
-                <a href="mailto:mail@example.com">
-                  <i class="fa fa-envelope"></i>
-                  mail@example.com
-                </a>
-              </div>
-              <!--! ------------------ -->
-              <!--! header__top--right -->
-              <div class="header__top--right">
-                <!-- facebook -->
-                <a href="#">
+    <!-- ! ---------- header top---------- -->
+    <section class="header__top">
+      <div class="container-fluid TopHeader">
+        <!-- header__top--content -->
+        <div
+          class="header__top--content d-flex align-items-center justify-content-between"
+        >
+          <!-- header__top--left -->
+          <div class="header__top--left header__top--common">
+            <ul>
+              <li>
+                <a href="contact" class="d-sm-block d-none"
+                  >Have any question ?</a
+                >
+              </li>
+
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+1(21) 234 4567">+1(21) 234 4567</a>
+              </li>
+
+              <li>
+                <i class="fa fa-envelope"></i
+                ><a href="mailto:mail@example.com">mail@example.com</a>
+              </li>
+            </ul>
+          </div>
+          <!-- header__top--right -->
+          <div class="header__top--right header__top--common">
+            <ul>
+              <li>
+                <a href="https://facebook.com/w3layouts">
                   <i class="fa-brands fa-facebook-f"></i>
                 </a>
-                <!-- twitter -->
-                <a href="#">
+              </li>
+              <li>
+                <a href="https://twitter.com/w3layouts">
                   <i class="fa-brands fa-twitter"></i>
                 </a>
-                <!-- instagram -->
-                <a href="#">
+              </li>
+
+              <li>
+                <a href="https://instagram.com/w3layouts">
                   <i class="fa-brands fa-instagram"></i>
                 </a>
-                <!-- linkedin -->
-                <a href="#">
+              </li>
+
+              <li class="me-0">
+                <a href="https://Linkedin.com/w3layouts">
                   <i class="fa-brands fa-linkedin-in"></i>
                 </a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <!--! headerNav -->
-        <div class="headerNav fixed-top" id="site-header">
-          <!-- container-fluid -->
-          <div class="container-fluid">
-            <!-- headerNav__content -->
-            <div
-              class="headerNav__content navbar-expand-lg d-flex justify-content-between"
+      </div>
+    </section>
+    <!-- ! ---------- header ---------- -->
+    <!--header-->
+    <header class="header__main fixed-top" id="site-header">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg stroke">
+          <!-- logo -->
+          <h1>
+            <a
+              class="navbar-brand d-flex align-items-center"
+              href="./index.html"
             >
-              <!--! headerNav__left -->
-              <div class="headerNav__left">
-                <nav class="navbar">
-                  <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img
-                      src="./img/logo.png"
-                      alt="Logo"
-                      width="48"
-                      height="48"
-                      class="me-1"
-                    />Studious
-                  </a>
-                </nav>
-              </div>
-              <!--! headerNav__right -->
-              <div class="headerNav__right d-flex align-items-center">
-                <nav class="navbar navbar-collapse">
-                  <div
-                    class="collapse navbar-collapse ml-lg-auto"
-                    id="navbarScroll"
-                  >
-                    <ul
-                      class="navbar-nav navbar-nav-scroll"
-                      style="--bs-scroll-height: 100px"
-                    >
-                      <!-- nav-item HOME -->
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"
-                          >HOME
-                        </a>
-                      </li>
-                      <!-- nav-item ABOUT US -->
-                      <li class="nav-item">
-                        <a class="nav-link myWhiteTex" href="./aboutUS.html"
-                          >ABOUT US</a
-                        >
-                      </li>
-                      <!-- nav-item PAGES dropdown -->
-                      <li class="nav-item dropdown">
-                        <a
-                          class="nav-link dropdown-toggle"
-                          href="#"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          PAGES
-                        </a>
-                        <!--! dropdown-menu -->
-                        <ul class="dropdown-menu">
-                          <!-- BLOG -->
-                          <li>
-                            <a class="dropdown-item" href="#">BLOG POSTS</a>
-                          </li>
-                          <!-- 404 PAGE -->
-                          <li>
-                            <a class="dropdown-item" href="#">404 PAGE</a>
-                          </li>
-                          <!-- LANDING PAGE -->
-                          <li>
-                            <a class="dropdown-item" href="#">LANDING PAGE</a>
-                          </li>
-                          <!-- ELEMENT PAGE -->
-                          <li>
-                            <a class="dropdown-item" href="#">ELEMENT PAGE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <!-- nav-item CONTACT -->
-                      <li class="nav-item">
-                        <a class="nav-link disabled myWhiteTex">CONTACT</a>
-                      </li>
-                    </ul>
-                    <!--! search -->
-                    <div class="header__search ml-lg-3">
-                      <form
-                        class="search-btn d-flex align-items-center position-relative"
-                        role="search"
-                      >
-                        <input
-                          class="form-control me-2"
-                          type="search"
-                          placeholder="Enter Keyword"
-                          aria-label="Search"
-                        />
-                        <button type="submit" class="btn btn-search">
-                          <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                      </form>
-                    </div>
+              <img src="./img/logo.png" alt="logo.png" class="me-1" />
+              Studious
+            </a>
+          </h1>
 
-                    <!--! switch light/dark -->
-                    <div>
-                      <button
-                        class="btn light-dark"
-                        id="switchButton"
-                        title="Click to switch theme"
-                      >
-                        <i class="far fa-moon"></i>
-                        <i class="far fa-sun"></i>
-                      </button>
-                    </div>
+          <!-- <button
+            class="navbar-toggler collapsed bg-gradient"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </button> -->
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--! navbar + search  -->
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <!--! Home -->
+            <ul id="primary-menu" class="navbar-nav ms-lg-auto">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">Home</a>
+              </li>
+              <!--! About Us -->
+              <li class="nav-item active">
+                <a href="./aboutUS.html" class="nav-link active">About Us</a>
+              </li>
+              <!--! dropdown-menu -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  PAGES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <!--! Contact -->
+              <li
+                id="menu-item-22"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22 nav-item"
+              >
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <!-- search right -->
+              <div class="search-right ml-lg-3 HeaderSearch">
+                <form
+                  action="https://wp.w3layouts.com/studious/"
+                  method="GET"
+                  class="search-box position-relative"
+                >
+                  <div class="input-search">
+                    <input
+                      type="search"
+                      name="s"
+                      placeholder="Enter Keyword"
+                      name="search"
+                      required="required"
+                      autofocus=""
+                      class="search-popup"
+                    />
                   </div>
-                </nav>
+                  <button type="submit" class="btn search-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
               </div>
-            </div>
+            </ul>
           </div>
-        </div>
+          <!-- toggle switch for light and dark theme -->
+          <!--! switch light/dark -->
+          <div>
+            <button
+              class="btn light-dark"
+              id="switchButton"
+              title="Click to switch theme"
+            >
+              <i class="far fa-moon"></i>
+              <i class="far fa-sun"></i>
+            </button>
+          </div>
+        </nav>
       </div>
     </header>
     <main>

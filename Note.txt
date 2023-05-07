@@ -1,1 +1,3 @@
 Nguyên lầm phần: Home - About Us
+Tân: elements + 404 page
+Phú: blog posts + landing-page

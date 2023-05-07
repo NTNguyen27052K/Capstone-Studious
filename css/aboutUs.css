@@ -9,7 +9,8 @@ body {
   background-color: #ffffff;
 }
 ul {
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
 }
 li {
   list-style: none;
@@ -17,6 +18,15 @@ li {
 a {
   text-decoration: none;
   color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 p {
   margin: 0;
@@ -73,80 +83,124 @@ p {
   border: none;
   transition: all 0.25s ease-in-out;
 }
-/*! ========== header ========== */
-
+/*!= header__top ==================== */
 .header__top {
   padding: 14px 15px;
-  background-color: var(--colorMain);
+  background-color: #0d369f;
 }
-/* ---------------------------- header__top--left */
-.header__top--left a {
+
+.header__top--common ul li {
+  display: inline-block;
+  margin-right: 2em;
+  transition: all 0.5s;
+}
+.header__top--common ul li a {
+  color: #fff;
   font-size: 15px;
   color: #ffffff;
   font-weight: 500;
   margin-right: 2rem;
   transition: all 0.5s;
 }
-.header__top--left a i {
+.header__top--left ul li i {
   margin-right: 8px;
-  font-size: 13px;
+  color: #fff;
 }
-.header__search {
+/*! ===================== header__top */
+/*! ================================= */
+/*! header__main ==================== */
+.header__main {
+  background-color: transparent;
+  padding: 0px;
+  transition: all 0.4s ease 0s;
+  height: 90px;
+  display: grid;
+  align-items: center;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
+}
+.navbar .navbar-brand {
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--colorMain);
+}
+.header__main .navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1rem;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 6px 0;
+  font-size: 16px;
+  color: #060606;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+.navbar .search-right {
   margin: 0 10px 0 10px;
 }
-/*! ================================ header__search ================== */
-.header__search button {
-  background-color: transparent;
-  border: none;
-}
-.header__search form .search-btn {
+.navbar form.search-box {
   display: flex;
   align-items: center;
 }
-.header__search form input {
+.navbar-expand-lg .navbar-nav .nav-item {
+  padding: 0 12px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.navbar form.search-box input {
   font-size: 15px;
-  color: #060606;
+  color: var(--heading-color);
+  border: none;
   background: transparent;
   padding: 10px 35px 10px 20px;
   width: 100%;
   border-radius: 30px;
   border: 2px solid #eee;
 }
-.header__search .btn-search {
+button.search-btn {
   position: absolute;
   color: #0d369f;
   right: 0;
-  padding: 0px 30px 0px 0px;
+  padding: 0px 20px 0px 0px;
+  background-color: transparent;
   border: none;
 }
-.header__search .btn-search:hover {
+button.search-btn:hover {
   background-color: transparent !important;
+  border: none !important;
   color: #ff6e65 !important;
 }
-/* ---------------------------- header__top--right */
-.header__top--right i {
-  margin-right: 2em;
-  transition: all 0.5s;
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }
-/*! ===== Neo header ===== */
-.fixed-top {
-  transition: all 0.4s ease 0s;
-  position: fixed;
-  z-index: 1030;
-  right: 0;
-  left: 0;
-
-  top: 50px;
-  background-color: #fff;
+.navbar form.search-box input {
+  font-size: 15px;
+  color: #060606;
+  border: none;
+  background: transparent;
+  padding: 10px 35px 10px 20px;
+  width: 100%;
+  border-radius: 30px;
+  border: 2px solid #eee;
 }
-.nav-fixed {
-  top: 0;
-  padding: 0px;
-  background-color: #fff;
-  height: 100px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
-  border-bottom: none;
-  z-index: 999 !important;
+.nav-item .active {
+  color: #ff6e65 !important;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: #ff6e65;
 }
 /*! switch light/dark ====================  */
 .light-dark {
@@ -178,57 +232,30 @@ p {
   color: #fff;
 }
 /* .dark#myTexWhite {
-    color: #fff;
-  } */
+  color: #fff;
+} */
 .dark .welcome .myWhiteTex {
   color: #fff;
 }
 .dark .headerNav__right a {
   color: #fff;
 }
-.dark #switchButton {
+button .dark #switchButton {
   background-color: black;
   border: 1px solid white;
+  transition: all 0.5s !important;
 }
 .dark #switchButton .fa-sun {
   display: block;
   color: white;
 }
-
+#switchButton:hover {
+  color: #ff6e65;
+}
 .dark #switchButton .fa-moon {
   display: none;
 }
-/*! ==================== switch light/dark */
-
-/* ---------------------------- hover */
-.header__top--left a:hover,
-.header__top--right a:hover {
-  color: #ff6e65;
-}
-/* ------------------------- headerNav */
-.headerNav .headerNav__content {
-  padding: 1.2rem 1rem;
-}
-/* ------------------------- headerNav__left */
-.headerNav__left .navbar .navbar-brand {
-  margin: 0;
-  padding: 0;
-  font-size: 26px;
-  font-weight: 600;
-  color: var(--colorMain);
-}
-/* ------------------------- headerNav__right */
-.headerNav__right .navbar {
-  margin: 0;
-  padding: 0;
-}
-.headerNav__right .nav-item .nav-link {
-  font-weight: 600;
-  color: #060606;
-}
-.headerNav__right .nav-item .active {
-  color: #ff6e65;
-}
+/*! ===================   header__main */
 
 .carousel__item {
   padding: 8em 5rem;
@@ -251,6 +278,25 @@ p {
   background: #fff;
   border: none;
   transition: all 0.25s ease-in-out;
+}
+/*! ===== Neo header ===== */
+.fixed-top {
+  transition: all 0.4s ease 0s;
+  position: fixed;
+  z-index: 1030;
+  right: 0;
+  left: 0;
+  top: 50px;
+  background-color: #fff;
+}
+.nav-fixed {
+  top: 0;
+  padding: 0px;
+  background-color: #fff;
+  height: 100px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: none;
+  z-index: 999 !important;
 }
 /*! ==================================== carousel */
 .carousel::before {
